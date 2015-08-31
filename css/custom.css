@@ -182,7 +182,7 @@ iframe
 }
 #wrapper
 {
-    background: url(../img/background.jpg);
+    background: url(../img/flag.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -763,6 +763,30 @@ a
 {
     background-color: #01AEF2;
 }
+.github
+{
+	background-color: #3acab1;
+}
+.github:hover
+{
+	background-color: #000000;
+}
+.linkedin
+{
+	background-color: #3acab1;
+}
+.linkedin:hover
+{
+	background-color: #007bb6;
+}
+.web
+{
+    background-color: #3acab1;
+}
+.web:hover
+{
+    background-color: #01AEF2;
+}
 form
 {
     width: 100%;
@@ -828,6 +852,18 @@ form
     {
         font-size: 35px;
     }
+}
+
+.sdlogo{
+	position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+=}
+.sdlogo *{
+	  vertical-align: middle;	
 }
 /* 
 

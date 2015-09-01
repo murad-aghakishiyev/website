@@ -240,7 +240,7 @@ iframe
 
 .event:hover 
  {
-    background-color:#FFF;
+    background-color:#000;
     opacity:0.5;
 }
 
@@ -271,6 +271,7 @@ iframe
 	line-height: 17px;
     white-space: nowrap;
     display: block;
+	color: #FFF;
 }
 
 h6

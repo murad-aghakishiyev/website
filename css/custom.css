@@ -233,7 +233,7 @@ iframe
 .event
 {
 	height: 80px;
-	min-width: 205px;
+	width: 16.66%;
 	float: left;
 	border-right: 1px solid #e7e7e7;
 }

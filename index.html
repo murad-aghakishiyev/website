@@ -3,6 +3,12 @@
 	<head>
 		<title>Skule Dev</title>
 
+		<!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		
 		<!-- meta -->
 		<meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +36,9 @@
 	</head>
 
 	<body>
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+
 		<div id="wrapper">
 			<div id="overlay-1">
 				<section id= "navigation">
@@ -58,19 +67,24 @@
 	  					</div>	<!-- container-fluid -->
 					</nav>	<!-- navbar -->
 				</section>	<!-- #navigation -->
+				
 				<section id="starting">
 					<div class="row">
 						<div class = "col-md-10 col-md-offset-1">
-							<div class="text-center starting-text">
+							<div class="text-center main-logo">
 								<img src="img/sdlogo.png" class="sdlogo"/>
 							</div>
+							<div class="input-field col-md-6 s12 col-md-offset-3">
+								<input id="email" type="email" class="validate">
+								<label for="email">Email</label>
+							</div>
+							<button class="btn waves-effect waves-light" type="submit" name="action">Submit <i class="material-icons right">send</i></button>
 						</div>
 					</div>
-
 				</section>
 				<div id="bottom" class="bottom">
 					<div class="event">
-						<img class="eventimage" src="img/sdlogo.png"/>
+						<img class="eventimage" src="img/events/sdlogo.png"/>
 						<div>
 							<h6>Mixer</h6>
 							<p>25th September</p>
@@ -78,7 +92,7 @@
 						</div>
 					</div>
 					<div class="event">
-						<img class="eventimage" src="img/sdlogo.png"/>
+						<img class="eventimage" src="img/events/sdlogo.png"/>
 						<div>
 							<h6>Idea Pitch</h6>
 							<p>2nd October</p>
@@ -86,7 +100,7 @@
 						</div>
 					</div>
 					<div class="event">
-						<img class="eventimage" src="img/sdlogo.png"/>
+						<img class="eventimage" src="img/events/github_icon.png"/>
 						<div>
 							<h6>Tools Training</h6>
 							<p>TBA</p>
@@ -94,7 +108,7 @@
 						</div>
 					</div>
 					<div class="event">
-						<img class="eventimage" src="img/sdlogo.png"/>
+						<img class="eventimage" src="img/events/android.png"/>
 						<div>
 							<h6>Android Training</h6>
 							<p>TBA</p>
@@ -102,7 +116,7 @@
 						</div>
 					</div>
 					<div class="event">
-						<img class="eventimage" src="img/sdlogo.png"/>
+						<img class="eventimage" src="img/events/ios_logo.png"/>
 						<div>
 							<h6>iOS Training</h6>
 							<p>TBA</p>
@@ -110,7 +124,7 @@
 						</div>
 					</div>
 					<div class="event">
-						<img class="eventimage" src="img/sdlogo.png"/>
+						<img class="eventimage" src="img/events/java.png"/>
 						<div>
 							<h6>Java Training</h6>
 							<p>TBA</p>

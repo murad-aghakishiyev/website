@@ -182,7 +182,7 @@ iframe
 }
 #wrapper
 {
-    background: url(../img/flag.jpg);
+    background: url(../img/background.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -193,12 +193,10 @@ iframe
     position: relative;
 }
 
-.starting-text
+.main-logo
 {
-    padding: 177px 0px;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px #000;
-    letter-spacing: 2px;
+    padding-top: 250px;	
+	padding-bottom: 250px;
 }
 .rene {
     font-size: 120px;
@@ -918,8 +916,10 @@ form
     right:0;
     bottom:0;
     margin:auto;
-    max-width: 100%;
-=}
+    max-width: 95%;
+	max-height: 95%;
+}
+
 .sdlogo *{
 	  vertical-align: middle;
 }

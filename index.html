@@ -21,9 +21,11 @@
 		<link rel="stylesheet" href="css/owl.theme.css">
 		<link rel="stylesheet" href="css/owl.transitions.css">
 	    <link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/parallax.css">
 	    <link rel="stylesheet" href="css/custom.css">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		
 
 	    <!-- js -->
 	    <script src="js/jquery.min.js"></script>
@@ -38,6 +40,7 @@
 	<body>
 	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script src="js/parallax.js"></script>
 
 		<div id="wrapper">
 			<div id="overlay-1">
@@ -74,11 +77,10 @@
 							<div class="text-center main-logo">
 								<img src="img/sdlogo.png" class="sdlogo"/>
 							</div>
-							<!--div class="input-field col-md-6 s12 col-md-offset-3">
-								<input id="email" type="email" class="validate">
-								<label for="email">Email</label>
+							<div class="center">
+								<a href="#join" class="waves-effect waves-light btn blue"><i class="material-icons left large">email</i>Subscribe to Mailing List</a>
+								<a href="https://www.facebook.com/groups/1875484372677548/" target="_blank" class="waves-effect waves-light btn blue"><i class="material-icons right">group</i>Join our facebook group</a>
 							</div>
-							<button class="btn waves-effect waves-light" type="submit" name="action">Submit <i class="material-icons right">send</i></button>-->
 						</div>
 					</div>
 				</section>
@@ -154,6 +156,50 @@
 			</div>	<!-- container -->
 		</section>	<!-- about us -->
 
+		<!-- Join Us -->
+		<section id="join" class="bg-image-parallax"> 
+			<div class="container">
+				<div class="row text-center" id="heading">
+					<div class="col-md-6 col-md-offset-3 wow animated zoomInDown" id="heading-text">
+						<h3 class="font-white">Join Us</h3>
+	                	<hr class="full">
+	                	<br/>
+					</div>
+				</div>	<!-- row -->
+				
+				<form  role="form" method="post" id="subscribe">
+    
+    <input type="email"  id="email" name="email" placeholder="you@yourself.com" value="">
+    <button type="submit">SUBSCRIBE</button>
+    
+</form>
+
+				<div class="row">
+					<form class="col s12" role="form" method="post" id="subscribe">
+						<div class="row">
+							<div class="input-field col s6">
+								<input placeholder="Placeholder" id="first_name" type="text" class="validate">
+								<label for="first_name">First Name</label>
+							</div>
+							<div class="input-field col s6">
+								<input id="last_name" type="text" class="validate">
+								<label for="last_name">Last Name</label>
+							</div>
+						</div>
+						<div class="row">	
+							<div class="input-field col s12">
+								<input id="email" type="email" class="validate">
+								<label for="email">Email</label>
+							</div>
+						</div>
+						<div class="center">
+							<a type="submit" class="waves-effect waves-light btn blue"><i class="material-icons left large">email</i>Subscribe</a>
+						</div>
+					</form>
+				</div>
+			</div>	<!-- container -->
+		</section>
+		
 		<!-- Our service -->
 		<section id="our_service">
 			<div class="container">
@@ -496,11 +542,50 @@
 
 			});
 		</script>
-        <script src="js/jquery-ui-1.10.3.min.js"></script>
-        <script src="js/jquery.knob.js"></script>
-        <script src="js/daterangepicker.js"></script>
-        <script src="js/bootstrap3-wysihtml5.all.min.js"></script>
-        <script src="js/dashboard.js"></script>
+		
+		<script>
+		$(document).ready(function() {
+		$('#subscribe').submit(function() {
+			if (!valid_email_address($("#email").val()))
+			{
+				$(".message").html('The email address you entered was invalid. Please make sure you enter a valid email address to subscribe.');
+			}
+			else
+			{
+				
+				$(".message").html("<span style='color:green;'>Adding your email address...</span>");
+				$.ajax({
+					url: 'subscribe.php', 
+					data: $('#subscribe').serialize(),
+					type: 'POST',
+					success: function(msg) {
+						if(msg=="success")
+						{
+							$("#email").val("");
+							$(".message").html('<span style="color:green;">You have successfully subscribed to our mailing list.</span>');
+							
+						}
+						else
+						{
+						  $(".message").html('The email address you entered was invalid. Please make sure you enter a valid email address to subscribe.');  
+						}
+					}
+				});
+			}
 
+			return false;
+		});
+	});
+	function valid_email_address(email)
+	{
+		var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+		return pattern.test(email);
+	}
+	</script>
+    <script src="js/jquery-ui-1.10.3.min.js"></script>
+    <script src="js/jquery.knob.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="js/dashboard.js"></script>	
 	</body>
 </html>

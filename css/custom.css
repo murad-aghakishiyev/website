@@ -123,6 +123,15 @@ li a
     padding: 5px 0px
 }
 
+.timeline {
+	display: block;
+    margin: 0 auto;
+}
+
+.timeline-background {
+	background: url(../img/circuit.jpg);
+}
+
 .main_content
 {
     padding: 50px 0px;
@@ -193,10 +202,17 @@ iframe
     position: relative;
 }
 
+.bg-image-parallax {
+	background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+	background: url("../img/parallax.jpg") 50% 0px no-repeat; 
+}
+
 .main-logo
 {
-    padding-top: 250px;	
-	padding-bottom: 250px;
+    padding-top: 280px;	
+	padding-bottom: 230px;
 }
 .rene {
     font-size: 120px;
@@ -204,6 +220,10 @@ iframe
     font-family: "omnes-pro", "Helvetica", sans-serif;
     font-weight: 300;
     margin-top: 75px;
+}
+
+.font-white {
+	color: #fff;
 }
 
 .starting-text h2 {
@@ -916,8 +936,8 @@ form
     right:0;
     bottom:0;
     margin:auto;
-    max-width: 95%;
-	max-height: 95%;
+    max-width: 100%;
+	max-height: 100%;
 }
 
 .sdlogo *{

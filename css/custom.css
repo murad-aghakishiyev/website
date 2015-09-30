@@ -129,7 +129,10 @@ li a
 }
 
 .timeline-background {
-	background: url(../img/circuit.jpg);
+	background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+	background: url(../img/circuit2.png);
 }
 
 .main_content
